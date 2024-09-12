@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+}
+/* Estilos anteriores... */
+
+.image-container {
+  width: 200px;
+  height: 200px; /* Ajuste conforme o aspecto da imagem */
+  margin: 10px auto; /* Centraliza a imagem abaixo do título */
+  background-image: url('../static/img/speedometer.png'); /* Caminho para a imagem */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 40px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.label {
+  text-align: left;
+  width: 50%;
+  padding-right: 10px;
+  align-content: center;
+}
+
+.value {
+  text-align: right;
+  width: 50%;
+  padding-left: 10px;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #666;
+  align-content: center;
+}
+
+/* Estilo para Velocidade e Mbps */
+.category, .unit {
+  /* text-align: left; */
+  color: #830505; /* Cinza escuro */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.category {
+  position: absolute;
+  left: 0;
+  top: -30px; /* Ajuste para alinhar acima da legenda */
+}
+
+.unit {
+  position: absolute;
+  right: 0;
+  top: -30px; /* Ajuste para alinhar acima dos resultados */
+}
+
+button {
+  padding: 10px 20px;
+  /* margin: 10px auto; */
+  font-size: 16px;
+  background-color: #303030;
+  color: #ffffffe8;
+  /* color: white; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a51313;
+}
+
+/* Animação de loading */
+.loading {
+  color: gray;
+  animation: blink 1s infinite;
+}
+
+#status-message {
+  margin: 20px auto;
+  height: 30px;
+  font-size: 18px;
+}
+
+/* Mensagem de "Aguarde..." em amarelo piscando */
+.awaiting {
+  color: rgb(102, 101, 100);
+  animation: blink 1s infinite;
+}
+
+/* Mensagem de "Teste finalizado!" em verde */
+.finished {
+  color: rgba(175, 4, 4, 0.938);
+}
+
+/* Animação de piscar */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
